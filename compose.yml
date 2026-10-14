@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    image: python:3.11-slim
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: practice
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    
+
+
+   
